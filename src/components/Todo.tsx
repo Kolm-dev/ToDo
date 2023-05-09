@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { ITodo } from "../types/types";
 import style from "../styles/Todo.module.scss";
@@ -10,7 +10,8 @@ type TypeTodoProps = ITodo & {
 
 const Todo = ({ id, title, index, removeTodo }: TypeTodoProps) => {
 	const [completed, setCompleted] = useState(false);
-	const completeHandler = (statusComplete: boolean): void => {
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	const completeHandler = (_s: boolean): void => {
 		setCompleted(prev => !prev);
 	};
 

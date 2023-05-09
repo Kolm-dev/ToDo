@@ -9,9 +9,12 @@ function App() {
 	const [todos, setTodos] = useState<Array<ITodo>>([]);
 
 	useEffect(() => {
-		const storedTodos = JSON.parse(localStorage.getItem("todos"));
-		if (storedTodos) {
-			setTodos(storedTodos);
+		const storedTodos = localStorage.getItem("todos");
+		if (storedTodos !== null) {
+			const parsedTodos = JSON.parse(storedTodos);
+			if (parsedTodos) {
+				setTodos(parsedTodos);
+			}
 		}
 	}, []);
 

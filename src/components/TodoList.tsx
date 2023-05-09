@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import Todo from "./Todo";
 import { ITodo } from "../types/types";
 import "../styles/Todolist.scss";
