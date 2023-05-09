@@ -45,7 +45,7 @@ function App() {
 	};
 
 	return (
-		<div className={styles.app}>
+		<div className={`${styles.app} `}>
 			<h1 className={styles.appTitle}>Todo app</h1>
 			<form className={styles.formApp}>
 				<input
@@ -55,15 +55,17 @@ function App() {
 					onChange={onChangeHandler}
 				/>
 				<button
-					className={styles.addTodoButton}
+					className={`${styles.addTodoButton}`}
 					onClick={addTodoHandler}>
 					Add todo
 				</button>
 			</form>
-			<TodoList
-				removeTodo={removeTodo}
-				todos={todos}
-			/>
+			{todos.length ? (
+				<TodoList
+					removeTodo={removeTodo}
+					todos={todos}
+				/>
+			) : null}
 		</div>
 	);
 }

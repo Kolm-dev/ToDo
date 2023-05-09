@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Todo from "./Todo";
 import { ITodo } from "../types/types";
+import "../styles/Todolist.scss";
 
 type TodoListProps = {
 	todos: ITodo[];
@@ -9,7 +10,7 @@ type TodoListProps = {
 
 const TodoList = ({ todos, removeTodo }: TodoListProps) => {
 	return (
-		<div>
+		<div className="todoListWrapper">
 			{todos.map((todo, index) => {
 				return (
 					<Todo

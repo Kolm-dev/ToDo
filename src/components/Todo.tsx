@@ -15,15 +15,14 @@ const Todo = ({ id, title, index, removeTodo }: TypeTodoProps) => {
 	};
 
 	return (
-		<div className={style.todo}>
+		<div className={`${style.todo} ${completed ? style.completedStyle : ""}`}>
 			<h4
-				className={style.todoHeader}
-				onClick={() => completeHandler(completed)}
-				style={{ textDecorationLine: completed ? "line-through" : "none" }}>
-				{`#${index + 1}. ${title}`}
+				className={`${style.todoHeader}`}
+				onClick={() => completeHandler(completed)}>
+				{`#${index + 1}. ${title} ${completed ? "(completed)" : ""}`}
 			</h4>
 			<AiFillDelete
-				className={style.deleteButton}
+				className={`${style.deleteButton}`}
 				onClick={() => removeTodo(id)}
 			/>
 		</div>
