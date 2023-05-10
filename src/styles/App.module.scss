@@ -27,3 +27,28 @@
 		border: 1px solid #a13535;
 	}
 }
+
+@media (max-width: 550px) {
+	.app {
+		width: 100vw;
+	}
+}
+
+@media (max-width: 360px) {
+	.app {
+		width: 100%;
+	}
+	.addTodoButton {
+		text-align: center;
+		margin-top: 10px;
+	}
+	.appTitle {
+		color: #181818;
+		font-size: 35px;
+	}
+	.formApp {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

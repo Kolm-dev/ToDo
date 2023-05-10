@@ -6,9 +6,8 @@
 }
 .todo {
 	box-sizing: border-box;
-
+	min-width: 400px;
 	background-color: #6ad8a3;
-	min-width: 500px;
 	display: flex;
 	align-items: center;
 	border: 3px solid rgb(136, 136, 136);
@@ -32,5 +31,17 @@
 		:hover {
 			transform: scale(1.1);
 		}
+	}
+}
+
+@media (max-width: 550px) {
+	.todo {
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 375px) {
+	.todo {
+		font-size: 10px;
 	}
 }
