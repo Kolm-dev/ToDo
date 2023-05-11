@@ -55,6 +55,7 @@ function App() {
 					className={styles.inputApp}
 					value={todo}
 					type="text"
+					placeholder="What do you want to do?"
 					onChange={onChangeHandler}
 				/>
 				<button

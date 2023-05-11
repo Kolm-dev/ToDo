@@ -21,15 +21,25 @@
 		font-size: 1.0625em;
 		font-family: "Times New Roman";
 	}
-	.deleteButton {
-		width: 1.5625em;
-		height: 1.875em;
-		cursor: pointer;
-		color: rgb(230, 111, 111);
-		transition: all 0.5s all;
-		:hover {
-			transition: all 0.5s ease-out;
-			transform: scale(1.1em);
+	.controlButton {
+		display: flex;
+		margin-left: 20px;
+		align-items: center;
+		justify-content: center;
+		.completeButton,
+		.checkButton,
+		.deleteButton {
+			width: 1.2em;
+			height: 1.2em;
+			cursor: pointer;
+			color: rgb(230, 111, 111);
+		}
+		.completeButton {
+			width: 1em;
+		}
+		.checkButton {
+			width: 1.2em;
+			fill: #18a018;
 		}
 	}
 }
