@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AiFillDelete } from "react-icons/ai";
-import { GrCompliance, GrCheckboxSelected } from "react-icons/gr";
+import { GrCompliance } from "react-icons/gr";
 import { ITodo } from "../types/types";
 import { IoMdCheckboxOutline } from "react-icons/io";
 import style from "../styles/Todo.module.scss";
@@ -19,7 +19,9 @@ const Todo = ({ id, title, index, removeTodo }: TypeTodoProps) => {
 
 	return (
 		<div className={`${style.todo} ${completed ? style.completedStyle : ""}`}>
-			<h4 className={`${style.todoHeader}`}>{`#${index + 1}. ${title}`}</h4>
+			<h4
+				onClick={() => completeHandler(completed)}
+				className={`${style.todoHeader}`}>{`#${index + 1}. ${title}`}</h4>
 			<div className={style.controlButton}>
 				{!completed ? (
 					<GrCompliance
