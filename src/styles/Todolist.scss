@@ -1,22 +1,16 @@
 .todoListWrapper {
 	margin-top: 2rem;
 	background-color: #e1e0e0;
-	border-radius: 1rem;
+	border-radius: 0.7rem;
 	display: flex;
 	flex-direction: column;
 	box-sizing: border-box;
-	padding: 7.5px 15px;
-}
-@media (max-width: 550px) {
-	.todoListWrapper {
-		padding: 0;
-		margin-top: 2rem;
-	}
+	padding: 0.5em 0.5em;
 }
 
-@media (max-width: 370px) {
+@media screen and (min-width: 300px) and (max-width: 450px) {
 	.todoListWrapper {
-		padding: 0;
-		margin-top: 1rem;
+		margin: 20px 30px;
+		min-width: 300px;
 	}
 }

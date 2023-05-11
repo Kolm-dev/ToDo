@@ -1,47 +1,42 @@
 .todo.completedStyle {
 	text-decoration: line-through;
-	font-size: 15px;
+	font-size: 0.9375em;
 	font-family: "Roboto";
 	background-color: rgba(241, 201, 201, 0.834);
 }
 .todo {
 	box-sizing: border-box;
-	min-width: 400px;
 	background-color: #6ad8a3;
 	display: flex;
+	max-width: 95%;
 	align-items: center;
-	border: 3px solid rgb(136, 136, 136);
-	border-radius: 10px;
-	margin: 7px;
+	border: 0.1875em solid rgb(136, 136, 136);
+	border-radius: 0.625em;
+	margin: 0.4375em;
 	justify-content: space-between;
-	padding: 0 20px;
-
+	padding: 0 1.25em;
 	.todoHeader {
 		color: rgb(3, 3, 3);
 		cursor: pointer;
-		font-size: 17px;
+		font-size: 1.0625em;
 		font-family: "Times New Roman";
 	}
 	.deleteButton {
-		width: 25px;
-		height: 30px;
+		width: 1.5625em;
+		height: 1.875em;
 		cursor: pointer;
 		color: rgb(230, 111, 111);
 		transition: all 0.5s all;
 		:hover {
-			transform: scale(1.1);
+			transition: all 0.5s ease-out;
+			transform: scale(1.1em);
 		}
 	}
 }
 
-@media (max-width: 550px) {
+@media screen and (min-width: 320px) and (max-width: 450px) {
 	.todo {
-		font-size: 10px;
-	}
-}
-
-@media (max-width: 375px) {
-	.todo {
-		font-size: 10px;
+		width: 90%;
+		margin: 0.2rem auto;
 	}
 }
